@@ -3,8 +3,9 @@
     <el-aside :style='{width:"auto"}'>
       <div class="logo"></div>
       <el-menu
+        router
         :collapse="iscollapse"
-        unique-opened="true"
+        :unique-opened="true"
         default-active="2"
         class="el-menu-vertical-demo"
         @open="handleOpen"
@@ -17,7 +18,7 @@
             <i class="el-icon-location"></i>
             <span slot="title">用户管理</span>
           </template>
-          <el-menu-item index="/user">
+          <el-menu-item index="/users">
             <i class="el-icon-menu"></i>
             <span>用户列表</span>
           </el-menu-item>
@@ -102,10 +103,10 @@ export default {
   },
   methods: {
     handleOpen (key, keyPath) {
-      console.log(key, keyPath)
+      // console.log(key, keyPath)
     },
     handleClose (key, keyPath) {
-      console.log(key, keyPath)
+      // console.log(key, keyPath)
     },
     toggleMenu () {
       this.iscollapse = !this.iscollapse
